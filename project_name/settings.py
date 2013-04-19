@@ -48,6 +48,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     'opps.core.middleware.DynamicSiteMiddleware', # Used in Multi-Site
+    'johnny.middleware.LocalStoreClearMiddleware',
+    'johnny.middleware.QueryCacheMiddleware',
 )
 
 INSTALLED_APPS = (
@@ -77,6 +79,7 @@ TEST_RUNNER = 'django_coverage.coverage_runner.CoverageRunner'
 
 CACHES = {'default': {
     'BACKEND': 'django.core.cache.backends.dummy.DummyCache'}}
+JOHNNY_MIDDLEWARE_KEY_PREFIX='opps_{{ project_name }}'
 
 LOGGING = {
     'version': 1,
