@@ -89,7 +89,7 @@ TEST_RUNNER = 'django_coverage.coverage_runner.CoverageRunner'
 
 CACHES = {'default': {
     'BACKEND': 'django.core.cache.backends.dummy.DummyCache'}}
-JOHNNY_MIDDLEWARE_KEY_PREFIX='opps_{{ project_name }}'
+JOHNNY_MIDDLEWARE_KEY_PREFIX = 'opps_{{ project_name }}'
 
 LOGGING = {
     'version': 1,
