@@ -51,8 +51,6 @@ MIDDLEWARE_CLASSES = (
     'opps.core.middleware.DynamicSiteMiddleware',
     # Used in Multi-Site
     'opps.core.middleware.MobileDetectionMiddleware',
-    'johnny.middleware.LocalStoreClearMiddleware',
-    'johnny.middleware.QueryCacheMiddleware',
 )
 
 TEMPLATE_DIRS = (os.path.join(PROJECT_PATH, 'src', 'templates'),)
@@ -91,7 +89,6 @@ TEST_RUNNER = 'django_coverage.coverage_runner.CoverageRunner'
 
 CACHES = {'default': {
     'BACKEND': 'django.core.cache.backends.dummy.DummyCache'}}
-JOHNNY_MIDDLEWARE_KEY_PREFIX = 'opps_{{ project_name }}'
 
 LOGGING = {
     'version': 1,
