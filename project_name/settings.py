@@ -69,10 +69,12 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     'opps.core',
+    'opps.containers',
+    'opps.archives',
+    'opps.articles',
     'opps.boxes',
     'opps.channels',
     'opps.sources',
-    'opps.articles',
     'opps.images',
     'opps.sitemaps',
     'opps.flatpages',
