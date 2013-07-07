@@ -48,9 +48,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     # Used in Multi-Site
-    'opps.core.middleware.DynamicSiteMiddleware',
+    'opps.contrib.multisite.middleware.DynamicSiteMiddleware',
     # Used in Multi-Site
-    'opps.core.middleware.MobileDetectionMiddleware',
+    'opps.contrib.mobile.middleware.MobileDetectionMiddleware',
 )
 
 TEMPLATE_DIRS = (os.path.join(PROJECT_PATH, 'src', 'templates'),)
@@ -78,6 +78,8 @@ INSTALLED_APPS = (
     'opps.images',
     'opps.sitemaps',
     'opps.flatpages',
+    
+    'opps.contrib.multisite',
 
     'south',
     'taggit',
