@@ -87,7 +87,8 @@ INSTALLED_APPS = (
 
 OPPS_CHECK_MOBILE = True
 
-THUMBOR_MEDIA_URL = 'http://localhost:8000/media/'
+MEDIA_URL = '/media/'
+# THUMBOR_MEDIA_URL = 'http://localhost:8000/media/'
 
 TEST_RUNNER = 'django_coverage.coverage_runner.CoverageRunner'
 
