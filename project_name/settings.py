@@ -49,7 +49,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     # Used in Multi-Site
     'opps.contrib.multisite.middleware.DynamicSiteMiddleware',
-    # Used in Multi-Site
+    # Used in Mobile Detection
     'opps.contrib.mobile.middleware.MobileDetectionMiddleware',
 )
 
