@@ -85,6 +85,7 @@ INSTALLED_APPS = (
 
     'south',
     'taggit',
+    'rest_framework',
 )
 
 OPPS_CHECK_MOBILE = True
