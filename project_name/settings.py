@@ -71,6 +71,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     'opps.core',
+    'opps.core.tags',
     'opps.containers',
     'opps.archives',
     'opps.articles',
@@ -84,7 +85,6 @@ INSTALLED_APPS = (
     'opps.contrib.multisite',
 
     'south',
-    'taggit',
     'rest_framework',
 )
 
