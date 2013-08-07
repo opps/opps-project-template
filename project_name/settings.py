@@ -5,12 +5,12 @@ import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
+PROJECT_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..')
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_PATH, '../{{ project_name }}.db'),
+        'NAME': os.path.join(PROJECT_PATH, '{{ project_name }}.db'),
     }
 }
 
@@ -53,10 +53,9 @@ MIDDLEWARE_CLASSES = (
     'opps.contrib.mobile.middleware.MobileDetectionMiddleware',
 )
 
-TEMPLATE_DIRS = (os.path.join(PROJECT_PATH, 'src', 'templates'),)
+TEMPLATE_DIRS = (os.path.join(PROJECT_PATH, 'templates'),)
 TEMPLATE_DIRS_WEB = TEMPLATE_DIRS
-TEMPLATE_DIRS_MOBILE = (os.path.join(PROJECT_PATH, 'src', 'templates',
-                                     'mobile'),)
+TEMPLATE_DIRS_MOBILE = (os.path.join(PROJECT_PATH, 'templates', 'mobile'),)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -67,26 +66,28 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.redirects',
     'django.contrib.formtools',
+
     'opps.contrib.admin',
+    'grappelli.dashboard',
+    'grappelli',
     'django.contrib.admin',
 
-    'opps.core',
-    'opps.core.tags',
-    'opps.containers',
     'opps.archives',
     'opps.articles',
     'opps.boxes',
+    'opps.core',
+    'opps.core.tags',
+    'opps.containers',
     'opps.channels',
-    'opps.sources',
-    'opps.images',
-    'opps.sitemaps',
     'opps.flatpages',
-
-    'opps.contrib.multisite',
+    'opps.images',
+    'opps.sources',
+    'opps.sitemaps',
 
     'south',
     'rest_framework',
 )
+
 
 OPPS_CHECK_MOBILE = True
 
@@ -125,4 +126,10 @@ LOGGING = {
 }
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_PATH, 'public', 'static')
+STATICFILES_DIRS = (os.path.join(PROJECT_PATH, 'public', '_static'),)
+
+URL_TINYMCE = STATIC_URL + "tinymce"
+PATH_TINYMCE = STATIC_URL + "tinymce"
+
 ROOT_URLCONF = '{{ project_name }}.urls'
