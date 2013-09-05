@@ -133,3 +133,8 @@ URL_TINYMCE = STATIC_URL + "tinymce"
 PATH_TINYMCE = STATIC_URL + "tinymce"
 
 ROOT_URLCONF = '{{ project_name }}.urls'
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
