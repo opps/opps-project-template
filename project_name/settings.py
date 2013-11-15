@@ -85,7 +85,7 @@ INSTALLED_APPS = (
     'opps.fields',
 
     'south',
-    'rest_framework',
+    'tastypie',
 )
 
 
