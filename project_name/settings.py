@@ -3,7 +3,7 @@
 import os
 import djcelery
 
-from opps import OPPS_CORE_APPS
+from opps.core import OPPS_CORE_APPS
 
 
 DEBUG = True
