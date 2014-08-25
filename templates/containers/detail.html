@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block header_title %}{{ context.title }}{% endblock header_title %}
+{% block header_text %}This is the detail template and can be found in <strong>templates/containers/detail.html</strong>{% endblock header_text %}
+
+{% block content %}
+    {{ object_list }}
+{% endblock content %}

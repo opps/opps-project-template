@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block header_title %}{{ channel.title }}{% endblock header_title %}
+{% block header_text %}This is a specific channel template for <strong>{{ channel.title }}</strong> channel and can be found in <strong>templates/containers/{{ channel.slug }}/list.html</strong>{% endblock header_text %}
+
+{% block content %}
+    {{ object_list }}
+{% endblock content %}
