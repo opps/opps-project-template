@@ -100,6 +100,7 @@ INSTALLED_APPS = [
     'mptt',
     'googl',
     'djcelery',
+    'endless_pagination',
 ]
 
 djcelery.setup_loader()
