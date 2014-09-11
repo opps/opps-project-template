@@ -1,1 +1,2 @@
 opps>=0.2
+django-endless-pagination
